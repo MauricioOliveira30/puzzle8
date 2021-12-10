@@ -9,8 +9,7 @@
 {
     
     // variáveis
-    int mat[5][5]3
-    ;
+    int mat[5][5];
     int linha, coluna, i, j, alinha, acoluna, cont, d, cont1, tmp;
     do
     {
