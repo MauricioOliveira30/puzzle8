@@ -61,7 +61,7 @@
         }
         printf("\t\n");
     }
-/*alinha=linha;
+alinha=linha;
 acoluna = coluna;
 if(mov==getch(4))
 {
@@ -89,5 +89,5 @@ if(mov==getch(8)){
     printf("Não pode movimentar");
 }
 
-*/return 0;
+return 0;
 }
