@@ -10,7 +10,7 @@
     
     // variáveis
     int mat[5][5];
-    int linha, coluna, i, j, alinha, acoluna, cont, d, cont1, tmp;
+    int linha, coluna, i, j, alinha, acoluna, cont, d, cont1, tmp,mov;
     do
     {
 
@@ -25,8 +25,19 @@
         system("cls");
 
     } while ((d < 3) || (d > 5));
+    // gera a matriz
+    for (linha = 0; linha < d; linha++)
+    {
+        for (coluna = 0; coluna < d; coluna++)
+        {
+            mat[linha][coluna] = d * linha + coluna;
+        }
+        printf("\t\n");
+    }
+
     // embaralha a matriz
     srand(time(NULL));
+
     for (linha = d - 1; linha > 0; linha--)
     {
         for (coluna = d - 1; coluna > 0; coluna--)
@@ -35,23 +46,48 @@
             j = rand() % (coluna + 1);
 
             tmp = mat[i][j];
-            mat[i][j] =mat[linha][coluna] ;
+            mat[i][j] = mat[linha][coluna];
             mat[linha][coluna] = tmp;
-           
         }
-        printf("\t\n");
     }
 
-    // gera a matriz
+    printf("\t\n");
+    // exibe a matriz
     for (linha = 0; linha < d; linha++)
     {
         for (coluna = 0; coluna < d; coluna++)
         {
-            mat[linha][coluna] = d * linha + coluna;
             printf(" %d ", mat[linha][coluna]);
         }
         printf("\t\n");
     }
+/*alinha=linha;
+acoluna = coluna;
+if(mov==getch(4))
+{
+    mov = alinha--;
+    mov = acoluna--;
+}else{
+    printf("Não pode movimentar");
+}
+if(mov==getch(6)){
+    mov = alinha++;
+    mov = acoluna++;
+}else{
+    printf("Não pode movimentar");
+}
+if(mov==getch(2)){
+    mov = alinha--;
+    mov = acoluna--;
+}else{
+    printf("Não pode movimentar");
+}
+if(mov==getch(8)){
+    mov = alinha++;
+    mov = acoluna++;
+}else{
+    printf("Não pode movimentar");
+}
 
-    return 0;
+*/return 0;
 }
